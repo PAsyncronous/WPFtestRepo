@@ -8,23 +8,34 @@ namespace WPFtestApp
 {
     public class MainWindowViewModel
     {
+        private DateTime myVar;
+
+
+        public DateTime MyProperty
+        {
+            get { return myVar; }
+            set { myVar = value; }
+        }
+
         private ICommand _leftButtonDownCommand;
 
-        public ICommand LeftMouseButtonDown
+        public ICommand SelectedDateChanged
         {
             get
             {
-                return _leftButtonDownCommand ?? (_leftButtonDownCommand = new RelayCommand(
-                   x =>
-                   {
-                       DoStuff();
-                   }));
+                return new RelayCommand<string>((date) => DoStuff(date));
+                //return _leftButtonDownCommand ?? (_leftButtonDownCommand = new RelayCommand(
+                //   x =>
+                //   {
+                //       DoStuff(date);
+                //   }));
             }
         }
 
-        private static void DoStuff()
+        private static void DoStuff(string date)
         {
-            MessageBox.Show("Responding to left mouse button click event...");
+            MessageBox.Show("invalid date");
+
         }
     }
 }
