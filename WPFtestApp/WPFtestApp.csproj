@@ -10,4 +10,10 @@
     <PackageReference Include="Extended.Wpf.Toolkit" Version="4.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>bin\Debug\netcoreapp3.0\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
