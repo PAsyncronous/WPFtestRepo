@@ -1,0 +1,32 @@
+﻿<Window x:Class="WPFtestApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFtestApp"
+        
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <DatePicker Grid.Column="2" Name="Datepicker" Grid.Row="0"  VerticalAlignment="Center" Text="{Binding StartDate, StringFormat = {}{0:MM/dd/yyyy}}" SelectedDateChanged="Datepicker_SelectedDateChanged">
+            <!--<DatePicker.Resources>
+                <Style TargetType="DatePickerTextBox">
+                    <Setter Property="IsReadOnly" Value="True"/>
+                </Style>
+            </DatePicker.Resources>-->
+        </DatePicker>
+        <TextBox Name="someTextbox" Grid.Row="1"></TextBox>
+
+        <Button Name="btn" Grid.Row="3" Content="Submit" HorizontalAlignment="Center" Height="25" 
+                    Width="100"  VerticalAlignment="Top" Click="btn_Click"/>
+        
+        
+        
+        
+    </Grid>
+</Window>
